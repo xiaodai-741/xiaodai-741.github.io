@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>友情链接</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+	</head>
+	<body>
+		<!-- 顶部滚动进度条 -->
+		<div class="progress"></div>
+		<div class="top">
+			<div class="box">
+				<a href="index.html">首页</a>
+				<a href="#">动态</a>
+				<a href="#">音乐盒</a>
+				<a href="#">我的笔记</a>
+				<div class="dropdown">
+				  <span class="dropdown_dow">常用工具</span>
+				  <div class="dropdown-content ">
+					<a href="#">列表1</a>
+				    <a href="#">列表2</a>
+				    <a href="#">列表3</a>
+				  </div>
+				</div>
+				<a href="#">我的游戏</a>
+				<a href="#">语录集</a>
+				<a href="#">时间轴</a>
+				<a href="#">留言板</a>
+				<a href="link.html">友情链接</a>
+			</div>
+		</div>
+		<!-- 中部图片and头像 -->
+		<div class="content">
+			<div class="wall">
+				<div class="layui-carousel" id="lunbo" >
+				  <div carousel-item>
+				    <img src="img/wp_02-1024x288.jpg" >
+				    <img src="img/banner3.jpg" >
+				  </div>
+				</div>
+				
+				<p>&nbsp;</p>
+				<div class="head ">
+					<img src="img/people.jpg" alt="">
+				</div>
+				<div class="link" style="height: 6vh;width: 10vw;">
+					<div><a href="https://www.jianshu.com/u/03ecacbb2a42"><img src="img/jianshu.jpg" alt=""></a></div>
+					<div><a href="https://gitee.com/cwljxf"><img src="img/mayun.jpg" alt=""></a></div>
+					<div><a href="https://github.com/chenweilong1713/"><img src="img/github.jpg" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="layui/layui.js"></script>
+	<script>
+		// 轮播图
+		layui.use('carousel', function(){
+		  var carousel = layui.carousel;
+		  //建造实例
+		  carousel.render({
+		    elem: '#lunbo'
+		    ,width: '100%' ,//设置容器宽度,
+			height:'85%',
+			arrow:"none", // 是否显示箭头
+			indicator:"none"  //是否显示点点点
+		    ,anim: 'updown' //切换动画方式
+		  });
+		});
+	</script>
+</html>
